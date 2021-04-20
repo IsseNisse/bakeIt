@@ -1,6 +1,10 @@
 <x-master>
     <div class="flex items-center justify-center mt-14">
         <div class="grid justify-items-center grid-cols-3 gap-14">
+            @foreach ($pastries as $pastry)
+                {{ $pastry->price }}
+            @endforeach
+
             <div class="max-w-sm rounded overflow-hidden shadow-lg">
                 <img class="w-full" src="/images/mums.jpg" alt="Mountain">
                 <div class="px-6 py-4">

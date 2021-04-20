@@ -15,11 +15,11 @@ class CreatePastriesTable extends Migration
     {
         Schema::create('pastries', function (Blueprint $table) {
             $table->id();
-            $table->string("pastry_name")
-            $table->string("img_path")
-            $table->string("price")
-            $table->text("description")
-            $table->text("ingredients")
+            $table->string("pastry_name");
+            $table->string("img_path")->nullable();
+            $table->string("price");
+            $table->text("description");
+            $table->text("ingredients")->nullable();
             $table->timestamps();
         });
     }
