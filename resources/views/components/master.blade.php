@@ -13,20 +13,25 @@
             <h1 class="text-4xl">BakeIt</h1>
         </div>
 
-        <div class="flex">
+        <div class="flex font-medium">
             <div class="w-full block sm:flex sm:items-center sm:w-auto">
                 <div class="text-lg sm:flex-grow">
-                    <a href="#" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">Home</a>
+                    <a href="#" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 mr-4">Home</a>
                 </div>
             </div>
             <div class="w-full block sm:flex sm:items-center sm:w-auto">
                 <div class="text-lg sm:flex-grow">
-                    <a href="#" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">Blog</a>
+                    <a href="#" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 mr-4">Blogg</a>
                 </div>
             </div>
             <div class="w-full block sm:flex sm:items-center sm:w-auto">
                 <div class="text-lg sm:flex-grow">
-                    <a href="#" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">About</a>
+                    <a href="#" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 mr-4">Om</a>
+                </div>
+            </div>
+            <div class="w-full block sm:flex sm:items-center sm:w-auto">
+                <div class="text-lg sm:flex-grow">
+                    <a href="#" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 mr-4">Kontakt</a>
                 </div>
             </div>
         </div>
