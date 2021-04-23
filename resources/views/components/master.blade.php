@@ -16,7 +16,7 @@
         <div class="flex font-medium">
             <div class="w-full block sm:flex sm:items-center sm:w-auto">
                 <div class="text-lg sm:flex-grow">
-                    <a href="#" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 mr-4">Home</a>
+                    <a href="/" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 mr-4">Home</a>
                 </div>
             </div>
             <div class="w-full block sm:flex sm:items-center sm:w-auto">

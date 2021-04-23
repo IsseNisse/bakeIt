@@ -6,9 +6,10 @@
         </div>
     </div>
     <div class="flex items-center justify-center mt-14">
-        <div class="grid justify-items-center grid-cols-3 gap-14 w-7/12">
+        <div class="grid justify-items-center lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-14 w-7/12">
             @foreach ($pastries as $pastry)
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <a href="#">
+              <div class="max-w-sm rounded overflow-hidden shadow-lg">
                 <img class="w-full" src="/images/mums.jpg" alt="">
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">{{ $pastry->pastry_name }}</div>
@@ -25,6 +26,7 @@
                   <span class="inline-block bg-pink-600 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">#winter</span>
                 </div>
               </div>
+            </a>
             @endforeach
         </div>
     </div>

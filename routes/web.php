@@ -17,6 +17,8 @@ use App\Http\Controllers\PastryController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/', [PastryController::class, 'index']);
+Route::post('/', [PastryController::class, 'store']);
+Route::get('/create', [PastryController::class, 'create']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

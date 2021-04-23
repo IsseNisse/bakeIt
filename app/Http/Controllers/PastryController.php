@@ -20,11 +20,11 @@ class PastryController extends Controller
     }
 
     public function create() {
-
+        return view('pastry.create');
     }
 
     public function store() {
-
+        dd("Posted pastry");
     }
 
     public function edit() {
