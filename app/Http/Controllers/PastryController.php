@@ -24,7 +24,21 @@ class PastryController extends Controller
     }
 
     public function store() {
-        dd("Posted pastry");
+        $attributes = request()->validate([
+            'name' => ['string', 'required', 'min:3', 'max:64'],
+            'image' => ['file'],
+            'price' => ['string', 'required'],
+            'description' => ['string', 'required', 'min:16', 'max:512']
+        ]);
+
+        $attributes['image'] = request('image')->store('images');
+
+        Pastry::create([
+            'pastry_name' => $attributes['name'],
+            'img_path' => $attributes['image'],
+            'price' => $attributes['price'],
+            'description' => $attributes['description']
+        ]);
     }
 
     public function edit() {

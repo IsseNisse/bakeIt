@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Pastry extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
 }

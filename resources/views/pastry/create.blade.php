@@ -1,6 +1,6 @@
 <x-master>
     <div class="flex items-center justify-center mt-5">
-        <form method="POST" action="/">
+        <form method="POST" action="/" enctype="multipart/form-data">
             @csrf
     
             <div class="flex flex-col mb-4">
