@@ -9,8 +9,8 @@
         <div class="grid justify-items-center lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-14 w-7/12">
             @foreach ($pastries as $pastry)
             <a href="#">
-              <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                <img class="w-full" src="{{ asset('storage/' . $pastry->img_path) }}" alt="">
+              <div class="max-w-xs h-4/5 rounded overflow-hidden shadow-lg">
+                <img class="w-full max-h-64 h-64 object-cover" src="{{ asset('storage/' . $pastry->img_path) }}" alt="">
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2">{{ $pastry->pastry_name }}</div>
                   <p class="text-gray-700 text-base mb-5">
