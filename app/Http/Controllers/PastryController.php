@@ -39,6 +39,8 @@ class PastryController extends Controller
             'price' => $attributes['price'],
             'description' => $attributes['description']
         ]);
+
+        return redirect()->route('home');
     }
 
     public function edit() {
