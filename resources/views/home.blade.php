@@ -12,7 +12,10 @@
               <div class="max-w-xs h-4/5 rounded overflow-hidden shadow-lg">
                 <img class="w-full max-h-64 h-64 object-cover" src="{{ asset('storage/' . $pastry->img_path) }}" alt="">
                 <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">{{ $pastry->pastry_name }}</div>
+                  <div class="flex justify-between">
+                    <div class="font-bold text-xl mb-2">{{ $pastry->pastry_name }}</div>
+                    <button type="submit" class="w-16 bg-red-600 text-white">Delete</button>
+                  </div>
                   <p class="text-gray-700 text-base mb-5">
                     {{ $pastry->description }}
                   </p>
