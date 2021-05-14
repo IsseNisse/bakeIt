@@ -15,8 +15,10 @@ class PastryController extends Controller
         ]);
     }
 
-    public function show() {
+    public function show($pastryName) {
+        $pastry = Pastry::where('pastry_name', $pastryName)->first();
 
+        return view('pastry.show', ['pastry' => $pastry]);
     }
 
     public function create() {

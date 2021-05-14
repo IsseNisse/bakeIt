@@ -10,4 +10,9 @@ class Pastry extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+
+    public function getImgPathAttribute($value) {
+        return asset('storage/' . $value);
+    }
 }

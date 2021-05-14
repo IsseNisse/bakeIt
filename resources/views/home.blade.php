@@ -6,16 +6,13 @@
         </div>
     </div>
     <div class="flex items-center justify-center mt-14">
-        <div class="grid justify-items-center lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-14 w-7/12">
+        <div class="grid justify-items-start lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-14 w-7/12">
             @foreach ($pastries as $pastry)
-            <a href="#">
+            <a href="/{{ $pastry->pastry_name }}">
               <div class="m-0 max-w-xs rounded overflow-hidden shadow-lg">
-                <img class="w-full max-h-64 h-64 object-cover" src="{{ asset('storage/' . $pastry->img_path) }}" alt="">
+                <img class="w-full max-h-64 h-64 object-cover" src="{{ $pastry->img_path }}" alt="">
                 <div class="px-3 py-4">
-                  <div class="flex justify-between">
-                    <div class="font-bold text-xl mb-2">{{ $pastry->pastry_name }}</div>
-                    <button type="submit" class="w-16 bg-red-600 text-white">Delete</button>
-                  </div>
+                  <div class="font-bold text-xl mb-2">{{ $pastry->pastry_name }}</div>
                   <p class="text-gray-700 text-base mb-5">
                     {{ $pastry->summary }}
                   </p>

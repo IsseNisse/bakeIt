@@ -16,7 +16,7 @@
                 <input class="border py-2 px-3 text-grey-darkest" type="text" name="price" id="price">    
             </div>
             <div class="flex flex-col mb-4">
-                <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="summary">Summary:</label>
+                <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="summary">Sammanfattning:</label>
                 <input class="border py-2 px-3 text-grey-darkest" type="text" name="summary" id="summary">    
             </div>
             <div class="flex flex-col mb-4">
