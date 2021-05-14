@@ -14,8 +14,6 @@ use App\Http\Controllers\PastryController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', [HomeController::class, 'index']);
 Route::get('/', [PastryController::class, 'index'])->name('home');
 Route::post('/', [PastryController::class, 'store']);
 Route::get('/create', [PastryController::class, 'create']);

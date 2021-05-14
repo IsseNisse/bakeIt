@@ -28,6 +28,7 @@ class PastryController extends Controller
             'name' => ['string', 'required', 'min:3', 'max:64'],
             'image' => ['file'],
             'price' => ['string', 'required'],
+            'summary' => ['string', 'required'],
             'description' => ['string', 'required', 'min:16', 'max:512']
         ]);
 
@@ -37,6 +38,7 @@ class PastryController extends Controller
             'pastry_name' => $attributes['name'],
             'img_path' => $attributes['image'],
             'price' => $attributes['price'],
+            'summary' => $attributes['summary'],
             'description' => $attributes['description']
         ]);
 

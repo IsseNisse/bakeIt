@@ -16,22 +16,22 @@
         <div class="flex font-medium">
             <div class="w-full block sm:flex sm:items-center sm:w-auto">
                 <div class="text-lg sm:flex-grow">
-                    <a href="/" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 mr-4">Home</a>
+                    <a href="/" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 mr-4 border-b-2 border-transparent hover:border-pink-600 {{ Request::is('/') ? 'border-b-2 border-pink-600' : '' }}">Home</a>
                 </div>
             </div>
             <div class="w-full block sm:flex sm:items-center sm:w-auto">
                 <div class="text-lg sm:flex-grow">
-                    <a href="#" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 mr-4">Blogg</a>
+                    <a href="#" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 mr-4 border-b-2 border-transparent hover:border-pink-600 {{ Request::is('/blogg') ? 'border-b-2 border-pink-600' : '' }}">Blogg</a>
                 </div>
             </div>
             <div class="w-full block sm:flex sm:items-center sm:w-auto">
                 <div class="text-lg sm:flex-grow">
-                    <a href="#" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 mr-4">Om</a>
+                    <a href="#" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 mr-4 border-b-2 border-transparent hover:border-pink-600 {{ Request::is('/om') ? 'border-b-2 border-pink-600' : '' }}">Om</a>
                 </div>
             </div>
             <div class="w-full block sm:flex sm:items-center sm:w-auto">
                 <div class="text-lg sm:flex-grow">
-                    <a href="#" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 mr-4">Kontakt</a>
+                    <a href="#" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 mr-4 border-b-2 border-transparent hover:border-pink-600 {{ Request::is('/contact') ? 'border-b-2 border-pink-600' : '' }}">Kontakt</a>
                 </div>
             </div>
         </div>
