@@ -16,7 +16,7 @@ class PastryController extends Controller
     }
 
     public function show($pastryName) {
-        $pastry = Pastry::where('pastry_name', $pastryName)->first();
+        $pastry = Pastry::where('name', $pastryName)->first();
 
         return view('pastry.show', ['pastry' => $pastry]);
     }
@@ -28,17 +28,17 @@ class PastryController extends Controller
     public function store() {
         $attributes = request()->validate([
             'name' => ['string', 'required', 'min:3', 'max:64'],
-            'image' => ['file'],
+            'img_path' => ['file'],
             'price' => ['string', 'required'],
-            'summary' => ['string', 'required'],
+            'summary' => ['string', 'max:32', 'required'],
             'description' => ['string', 'required', 'min:16', 'max:512']
         ]);
 
-        $attributes['image'] = request('image')->store('images');
+        $attributes['img_path'] = request('img_path')->store('images');
 
         Pastry::create([
-            'pastry_name' => $attributes['name'],
-            'img_path' => $attributes['image'],
+            'name' => $attributes['name'],
+            'img_path' => $attributes['img_path'],
             'price' => $attributes['price'],
             'summary' => $attributes['summary'],
             'description' => $attributes['description']
@@ -47,12 +47,30 @@ class PastryController extends Controller
         return redirect()->route('home');
     }
 
-    public function edit() {
+    public function edit($pastryName) {
+        $pastry = Pastry::where('name', $pastryName)->first();
 
+        return view('pastry.edit', ['pastry' => $pastry]);
     }
 
-    public function update() {
+    public function update($pastryName) {
+        $pastry = Pastry::where('name', $pastryName)->first();
 
+        $attributes = request()->validate([
+            'name' => ['string', 'required', 'min:3', 'max:64'],
+            'img_path' => ['file'],
+            'price' => ['string', 'required'],
+            'summary' => ['string', 'max:32', 'required'],
+            'description' => ['string', 'required', 'min:16', 'max:512']
+        ]);
+
+        if (request('img_path') != null) {
+            $attributes['img_path'] = request('img_path')->store('images');
+        }
+
+        $pastry->update($attributes);
+
+        return redirect('/' . $pastryName);
     }
 
     public function destroy() {

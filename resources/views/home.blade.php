@@ -8,11 +8,11 @@
     <div class="flex items-center justify-center mt-14">
         <div class="grid justify-items-start lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-14 w-7/12">
             @foreach ($pastries as $pastry)
-            <a href="/{{ $pastry->pastry_name }}">
+            <a href="/{{ $pastry->name }}">
               <div class="m-0 max-w-xs rounded overflow-hidden shadow-lg">
                 <img class="w-full max-h-64 h-64 object-cover" src="{{ $pastry->img_path }}" alt="">
                 <div class="px-3 py-4">
-                  <div class="font-bold text-xl mb-2">{{ $pastry->pastry_name }}</div>
+                  <div class="font-bold text-xl mb-2">{{ $pastry->name }}</div>
                   <p class="text-gray-700 text-base mb-5">
                     {{ $pastry->summary }}
                   </p>

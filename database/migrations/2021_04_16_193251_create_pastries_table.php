@@ -15,7 +15,7 @@ class CreatePastriesTable extends Migration
     {
         Schema::create('pastries', function (Blueprint $table) {
             $table->id();
-            $table->string("pastry_name");
+            $table->string("name");
             $table->string("img_path");
             $table->string("price");
             $table->string("summary");

@@ -18,6 +18,8 @@ Route::get('/', [PastryController::class, 'index'])->name('home');
 Route::post('/', [PastryController::class, 'store']);
 Route::get('/create', [PastryController::class, 'create']);
 Route::get('/{pastry}', [PastryController::class, 'show']);
+Route::get('/{pastry}/edit', [PastryController::class, 'edit']);
+Route::patch('/{pastry}', [PastryController::class, 'update']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
