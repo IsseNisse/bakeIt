@@ -74,6 +74,6 @@ class PastryController extends Controller
     }
 
     public function destroy() {
-
+        dd('hello');
     }
 }

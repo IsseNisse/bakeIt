@@ -9,9 +9,11 @@
                 <p class="mx-4">{{ $pastry->description }}</p>
                 <div class="lg:absolute lg:bottom-0 lg:right-0 pr-8 pt-14 mx-4 flex">
                     <a href="/{{ $pastry->name }}/edit">
-                        <button class="bg-blue-600 px-3 py-2">Edit</button>
+                        <button class="bg-blue-600 px-3 py-2 mr-2">Edit</button>
                     </a>
-                    <form action="">
+                    <form method="POST" action="{{ route('home') }}">
+                        @csrf
+                        @method('DELETE')
                         <button type="submit" class="bg-red-600 px-3 py-2">Delete</button>
                     </form>
                 </div>
