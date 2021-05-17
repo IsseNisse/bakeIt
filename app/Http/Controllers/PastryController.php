@@ -64,7 +64,7 @@ class PastryController extends Controller
             'description' => ['string', 'required', 'min:16', 'max:512']
         ]);
 
-        if (request('img_path') != null) {
+        if (request('img_path')) {
             $attributes['img_path'] = request('img_path')->store('images');
         }
 
