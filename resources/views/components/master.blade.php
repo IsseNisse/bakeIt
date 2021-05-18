@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>BakeIt</title>
 </head>
-<body class="min-h-screen mb-24">
+<body class="min-h-screen mb-24 lg:mb-0">
     <nav class="flex items-center justify-between flex-wrap p-6 border-b-2 border-pink-600">
         <div class="flex items-center flex-shrink-0 text-black mr-6">
             <a href="/" class="text-black italic">
