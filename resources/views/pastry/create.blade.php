@@ -21,7 +21,7 @@
             </div>
             <div class="flex flex-col mb-4">
                 <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="description">Beskrivning:</label>
-                <input class="border py-2 px-3 text-grey-darkest" type="text" name="description" id="description">    
+                <textarea class="border py-2 px-3 text-grey-darkest" name="description" id="description" rows="5"></textarea>  
             </div>
     
             <button class="bg-pink-600 p-2 rounded-lg" type="submit">Create</button>
