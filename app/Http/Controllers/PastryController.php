@@ -73,7 +73,10 @@ class PastryController extends Controller
         return redirect('/' . $pastryName);
     }
 
-    public function destroy() {
-        dd('hello');
+    public function destroy($pastryName) {
+        $pastry = Pastry::where('name', $pastryName);
+        $pastry->delete();
+
+        return redirect(route('home'));
     }
 }

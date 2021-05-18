@@ -11,9 +11,9 @@
                     <a href="/{{ $pastry->name }}/edit">
                         <button class="bg-blue-600 px-3 py-2 mr-2">Edit</button>
                     </a>
-                    <form method="POST" action="{{ route('home') }}">
+                    <form method="POST" action="/{{ $pastry->name }}">
                         @csrf
-                        @method('DELETE')
+                        @method('delete')
                         <button type="submit" class="bg-red-600 px-3 py-2">Delete</button>
                     </form>
                 </div>
