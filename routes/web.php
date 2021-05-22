@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PastryController;
+use App\Http\Controlles\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,8 @@ Route::get('/{pastry}', [PastryController::class, 'show']);
 Route::get('/{pastry}/edit', [PastryController::class, 'edit']);
 Route::patch('/{pastry}', [PastryController::class, 'update']);
 Route::delete('/{pastry}', [pastryController::class, 'destroy']);
+
+Route::post('/', [OrderController::class, 'store']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

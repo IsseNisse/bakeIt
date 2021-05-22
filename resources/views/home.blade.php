@@ -42,4 +42,26 @@
             </div>
         </div>
     </div>
+
+      <form class="flex justify-center mt-8" method="POST" action="{{ route('home') }}">
+      @csrf
+      
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 w-7/12">
+        <div class="flex flex-col mb-4">
+          <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="name">Namn:</label>
+          <input class="border-0 border-b-2 border-pink-600 py-2 px-3 text-grey-darkest" type="text" name="name" id="name">
+        </div>
+  
+        <div class="flex flex-col mb-4">
+          <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="name">Telefon:</label>
+          <input class="border-0 border-b-2 border-pink-600 py-2 px-3 text-grey-darkest" type="text" name="name" id="name">
+        </div>
+  
+        <div class="flex flex-col mb-4">
+          <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="description">Extra info:</label>
+          <textarea class="border-0 border-b-2 border-pink-600 py-2 px-3 text-grey-darkest" name="description" id="description" rows="5" placeholder="T.ex. Allergier etc."></textarea>  
+        </div>
+      </div>
+
+      </form>
 </x-master>
