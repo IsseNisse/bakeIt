@@ -15,4 +15,8 @@ class Pastry extends Model
     public function getImgPathAttribute($value) {
         return asset('storage/' . $value);
     }
+
+    public function orders() {
+        return $this->belongsToMany(Order::class);
+    }
 }

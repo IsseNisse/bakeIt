@@ -53,13 +53,13 @@
         </div>
   
         <div class="flex flex-col mb-4">
-          <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="name">Telefon:</label>
-          <input class="border-0 border-b-2 border-pink-600 py-2 px-3 text-grey-darkest" type="text" name="name" id="name">
+          <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="phone">Telefon:</label>
+          <input class="border-0 border-b-2 border-pink-600 py-2 px-3 text-grey-darkest" type="text" name="phone" id="phone">
         </div>
   
         <div class="flex flex-col mb-4">
-          <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="description">Extra info:</label>
-          <textarea class="border-0 border-b-2 border-pink-600 py-2 px-3 text-grey-darkest" name="description" id="description" rows="5" placeholder="T.ex. Allergier etc."></textarea>  
+          <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="info">Extra info:</label>
+          <textarea class="border-0 border-b-2 border-pink-600 py-2 px-3 text-grey-darkest" name="info" id="info" rows="5" placeholder="T.ex. Allergier etc."></textarea>  
         </div>
       </div>
 

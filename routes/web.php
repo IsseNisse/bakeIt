@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PastryController;
-use App\Http\Controlles\OrderController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +16,7 @@ use App\Http\Controlles\OrderController;
 |
 */
 Route::get('/', [PastryController::class, 'index'])->name('home');
-Route::post('/', [PastryController::class, 'store']);
+Route::post('/create', [PastryController::class, 'store']);
 Route::get('/create', [PastryController::class, 'create'])->name('create');
 Route::get('/{pastry}', [PastryController::class, 'show']);
 Route::get('/{pastry}/edit', [PastryController::class, 'edit']);
