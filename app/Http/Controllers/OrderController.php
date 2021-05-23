@@ -9,14 +9,14 @@ class OrderController extends Controller
 {
     public function store() {
         $attributes = request()->validate([
-            'name' => ['string', 'required', 'min:3', 'max:64'],
-            'phone' => ['required'],
-            'info' => ['string']
+            'name' => ['required', 'string', 'min:3', 'max:64'],
+            'phone_number' => ['required'],
+            'info' => []
         ]);
 
         Order::create([
             'name' => $attributes['name'],
-            'phone' => $attributes['phone'],
+            'phone_number' => $attributes['phone_number'],
             'info' => $attributes['info'],
         ]);
 
