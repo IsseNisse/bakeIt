@@ -21,7 +21,7 @@ Route::get('/create', [PastryController::class, 'create'])->name('create');
 Route::get('/{pastry}', [PastryController::class, 'show']);
 Route::get('/{pastry}/edit', [PastryController::class, 'edit']);
 Route::patch('/{pastry}', [PastryController::class, 'update']);
-Route::delete('/{pastry}', [pastryController::class, 'destroy']);
+Route::delete('/{pastry}', [PastryController::class, 'destroy']);
 
 Route::post('/', [OrderController::class, 'store']);
 
