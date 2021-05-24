@@ -74,13 +74,21 @@
           @enderror
         </div>
 
-        <div class="grid grid-cols-3">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
             @foreach ($pastries as $pastry)
             <div class="grid grid-rows-2 text-center justify-center">
-                <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="">{{ $pastry->name }}</label>
-                <input type="checkbox">
+              <div class="flex items-center">
+                <label class="uppercase font-bold text-lg text-grey-darkest break-words w-40" for="{{ $pastry->name }}">{{ $pastry->name }}</label>
+              </div>
+              <div>
+                <input name="pastries[]" id="{{ $pastry->name }}" type="checkbox">
+              </div>
             </div>
             @endforeach
+        </div>
+
+        <div>
+          <button class="bg-pink-600 p-2 rounded-lg text-white w-20 h-10 absolute bottom-4" type="submit">Order</button>
         </div>
 
       </form>

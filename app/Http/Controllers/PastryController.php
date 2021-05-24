@@ -27,7 +27,7 @@ class PastryController extends Controller
 
     public function store() {
         $attributes = request()->validate([
-            'name' => ['string', 'required', 'min:3', 'max:64'],
+            'name' => ['string', 'required', 'min:3', 'max:32'],
             'img_path' => ['file'],
             'price' => ['string', 'required'],
             'summary' => ['string', 'max:32', 'required'],
@@ -57,7 +57,7 @@ class PastryController extends Controller
         $pastry = Pastry::where('name', $pastryName)->first();
 
         $attributes = request()->validate([
-            'name' => ['string', 'required', 'min:3', 'max:64'],
+            'name' => ['string', 'required', 'min:3', 'max:34'],
             'img_path' => ['file'],
             'price' => ['string', 'required'],
             'summary' => ['string', 'max:32', 'required'],

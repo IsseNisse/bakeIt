@@ -8,6 +8,7 @@ use App\Models\Order;
 class OrderController extends Controller
 {
     public function store() {
+        dd(request());
         $attributes = request()->validate([
             'name' => ['required', 'string', 'min:3', 'max:64'],
             'phone_number' => ['required'],
