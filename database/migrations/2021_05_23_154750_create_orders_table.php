@@ -20,6 +20,18 @@ class CreateOrdersTable extends Migration
             $table->text('info');
             $table->timestamps();
         });
+
+        Schema::create('order_pastry', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('order_id');
+            $table->unsignedBigInteger('pastry_id');
+            $table->timestamps();
+
+            $table->unique(['order_id', 'pastry_id']);
+
+            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
+            $table->foreign('pastry_id')->references('id')->on('pastries')->onDelete('cascade');
+        });
     }
 
     /**

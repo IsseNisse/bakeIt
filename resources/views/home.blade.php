@@ -33,7 +33,7 @@
             @endforelse
             <div class="mx-4">
               <a href="{{ route('create') }}">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FA00FF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#DB2777" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <line x1="12" y1="5" x2="12" y2="19" />
                   <line x1="5" y1="12" x2="19" y2="12" />
@@ -81,14 +81,14 @@
                 <label class="uppercase font-bold text-lg text-grey-darkest break-words w-40" for="{{ $pastry->name }}">{{ $pastry->name }}</label>
               </div>
               <div>
-                <input name="pastries[]" id="{{ $pastry->name }}" type="checkbox">
+                <input name="pastries[]" id="{{ $pastry->name }}" type="checkbox" value="{{ $pastry->name }}">
               </div>
             </div>
             @endforeach
         </div>
 
-        <div>
-          <button class="bg-pink-600 p-2 rounded-lg text-white w-20 h-10 absolute bottom-4" type="submit">Order</button>
+        <div class="flex justify-center lg:justify-start">
+          <button class="bg-pink-600 p-2 rounded-lg text-white w-20 h-10 bottom-4" type="submit">Order</button>
         </div>
 
       </form>

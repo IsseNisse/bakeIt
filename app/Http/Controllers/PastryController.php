@@ -28,7 +28,7 @@ class PastryController extends Controller
     public function store() {
         $attributes = request()->validate([
             'name' => ['string', 'required', 'min:3', 'max:32'],
-            'img_path' => ['file'],
+            'img_path' => ['required', 'file'],
             'price' => ['string', 'required'],
             'summary' => ['string', 'max:32', 'required'],
             'description' => ['string', 'required', 'min:16', 'max:512']

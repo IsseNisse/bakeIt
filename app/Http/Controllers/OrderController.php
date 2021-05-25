@@ -8,11 +8,12 @@ use App\Models\Order;
 class OrderController extends Controller
 {
     public function store() {
-        dd(request());
+        dd(request()->pastries);
         $attributes = request()->validate([
             'name' => ['required', 'string', 'min:3', 'max:64'],
             'phone_number' => ['required'],
-            'info' => []
+            'info' => [],
+            'pastries' => ['required', 'min:1']
         ]);
 
         Order::create([
