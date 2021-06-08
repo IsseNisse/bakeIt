@@ -18,6 +18,9 @@ use App\Http\Controllers\OrderController;
 Route::get('/', [PastryController::class, 'index'])->name('home');
 Route::post('/create', [PastryController::class, 'store']);
 Route::get('/create', [PastryController::class, 'create'])->name('create');
+
+Route::get('/orders', [OrderController::class, 'index']);
+
 Route::get('/{pastry}', [PastryController::class, 'show']);
 Route::get('/{pastry}/edit', [PastryController::class, 'edit']);
 Route::patch('/{pastry}', [PastryController::class, 'update']);

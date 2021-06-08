@@ -7,8 +7,15 @@ use App\Models\Order;
 
 class OrderController extends Controller
 {
+    public function index() {
+        $orders = Order::all();
+
+        return view('order.index', [
+            'orders' => $orders
+        ]);
+    }
+
     public function store() {
-        dd(request()->pastries);
         $attributes = request()->validate([
             'name' => ['required', 'string', 'min:3', 'max:64'],
             'phone_number' => ['required'],
@@ -20,7 +27,7 @@ class OrderController extends Controller
             'name' => $attributes['name'],
             'phone_number' => $attributes['phone_number'],
             'info' => $attributes['info'],
-        ]);
+        ])->pastries()->attach(request('pastries'));
 
         return redirect()->route('home');
     }

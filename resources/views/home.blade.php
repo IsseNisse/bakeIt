@@ -76,12 +76,12 @@
 
         <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
             @foreach ($pastries as $pastry)
-            <div class="grid grid-rows-2 text-center justify-center">
+            <div class="grid grid-rows-2 text-center justify-center max-h-14">
               <div class="flex items-center">
                 <label class="uppercase font-bold text-lg text-grey-darkest break-words w-40" for="{{ $pastry->name }}">{{ $pastry->name }}</label>
               </div>
               <div>
-                <input name="pastries[]" id="{{ $pastry->name }}" type="checkbox" value="{{ $pastry->name }}">
+                <input class="text-pink-600" name="pastries[]" id="{{ $pastry->name }}" type="checkbox" value="{{ $pastry->id }}">
               </div>
             </div>
             @endforeach
