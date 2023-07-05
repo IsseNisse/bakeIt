@@ -34,7 +34,7 @@ class PastryController extends Controller
             'description' => ['string', 'required', 'min:16', 'max:512']
         ]);
 
-        $attributes['img_path'] = request('img_path')->store('images');
+        $attributes['img_path'] = request()->file('img_path')->store('images');
 
         Pastry::create([
             'name' => $attributes['name'],
